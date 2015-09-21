@@ -1,0 +1,31 @@
+{
+  "name": "node-hash-functions",
+  "version": "1.0.0",
+  "description": "some good hash functions for strings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liushoukai/node-hash-functions.git"
+  },
+  "keywords": [
+    "hash",
+    "functions",
+    "algorithm",
+    "DBJ",
+    "hash",
+    "function"
+  ],
+  "author": "liushoukai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liushoukai/node-hash-functions/issues"
+  },
+  "homepage": "https://github.com/liushoukai/node-hash-functions#readme",
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*"
+  }
+}
