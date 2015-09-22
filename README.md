@@ -6,6 +6,7 @@
 [node-image]: https://img.shields.io/badge/node.js-%3E=_0.10-brightgreen.svg?style=flat
 [node-url]: http://nodejs.org/download/
 __some good hash functions for strings, list below:__
+
 - RSHash
 - JSHash
 - PJWHash
