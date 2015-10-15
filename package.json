@@ -1,5 +1,5 @@
 {
-  "name": "node-hash-functions",
+  "name": "node-hashes",
   "version": "1.0.0",
   "description": "some good hash functions for strings",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/liushoukai/node-hash-functions.git"
+    "url": "git+https://github.com/liushoukai/node-hashes.git"
   },
   "keywords": [
     "hash",
@@ -21,9 +21,9 @@
   "author": "liushoukai",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/liushoukai/node-hash-functions/issues"
+    "url": "https://github.com/liushoukai/node-hashes/issues"
   },
-  "homepage": "https://github.com/liushoukai/node-hash-functions#readme",
+  "homepage": "https://github.com/liushoukai/node-hashes#readme",
   "devDependencies": {
     "chai": "*",
     "mocha": "*"
