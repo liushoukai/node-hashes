@@ -9,7 +9,7 @@
 [david-image]: https://david-dm.org/liushoukai/node-hashes.svg?style=flat
 [david-url]: https://david-dm.org/liushoukai/node-hashes
 
-Hash function algorithms for nodejs.
+Some of the more common uses of hash functions.
 
 ## Hash Function Algorithms
 
@@ -30,14 +30,14 @@ Hash function algorithms for nodejs.
 > Its the hash function widely used on most UNIX systems.
 
 > ### BKDR Hash Function
->This hash function comes from Brian Kernighan and Dennis Ritchie's book "The C Programming Language".
->It is a simple hash function using a strange set of possible seeds which all constitute a pattern of
->31....31...31 etc, it seems to be very similar to the DJB hash function.
+> This hash function comes from Brian Kernighan and Dennis Ritchie's book "The C Programming Language".
+> It is a simple hash function using a strange set of possible seeds which all constitute a pattern of
+> 31....31...31 etc, it seems to be very similar to the DJB hash function.
 
 > ### SDBM Hash Function
->This is the algorithm of choice which is used in the open source SDBM project. The hash function
->seems to have a good over-all distribution for many different data sets. It seems to work well in
->situations where there is a high variance in the MSBs of the elements in a data set.
+> This is the algorithm of choice which is used in the open source SDBM project. The hash function
+> seems to have a good over-all distribution for many different data sets. It seems to work well in
+> situations where there is a high variance in the MSBs of the elements in a data set.
 
 > ### DBJ Hash Function
 > An algorithm produced by Professor Daniel J. Bernstein and shown first to the world on the usenet
@@ -67,6 +67,17 @@ $npm install node-hashes --save
 
 ## Usage
 ```
-var hashFn = require('node-hashes');
-hashFn.DBJHash('secret');
+var hashFn = require('node-hashes')
+  , hash = hashFn.RSHash('foo')
+  , hash = hashFn.JSHash('foo')
+  , hash = hashFn.PJWHash('foo')
+  , hash = hashFn.ELFHash('foo')
+  , hash = hashFn.BKDRHash('foo')
+  , hash = hashFn.SDBMHash('foo')
+  , hash = hashFn.DBJHash('foo')
+  , hash = hashFn.DEKHash('foo')
+  , hash = hashFn.BPHash('foo')
+  , hash = hashFn.FNVHash('foo')
+  , hash = hashFn.APHash('foo')
+  ;
 ```

@@ -1,7 +1,7 @@
 {
   "name": "node-hashes",
-  "version": "1.0.0",
-  "description": "some good hash functions for strings",
+  "version": "0.0.1",
+  "description": "some of the more common uses of hash functions",
   "main": "index.js",
   "scripts": {
     "test": "node ./test/hash.test.js"
@@ -12,11 +12,19 @@
   },
   "keywords": [
     "hash",
-    "functions",
+    "hashes",
     "algorithm",
-    "DBJ",
-    "hash",
-    "function"
+    "RS",  
+    "JS",  
+    "PJW", 
+    "ELF", 
+    "BKDR",
+    "SDBM",
+    "DJB", 
+    "DEK", 
+    "BP",  
+    "FNV", 
+    "AP",  
   ],
   "author": "liushoukai",
   "license": "ISC",
@@ -25,7 +33,7 @@
   },
   "homepage": "https://github.com/liushoukai/node-hashes#readme",
   "devDependencies": {
-    "chai": "*",
+    "chai": "^3.3.0",
     "mocha": "*"
   }
 }

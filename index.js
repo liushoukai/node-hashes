@@ -1,3 +1,44 @@
 'use strict';
 
-module.exports = require('./lib/hash.js');
+var nodehashes = require('./build/Release/nodehashes');
+
+module.exports = (function() {
+	return {
+		RSHash : function(str) {
+			return nodehashes.hash("RSHash", str);
+		},
+		JSHash: function(str) {
+			return nodehashes.hash("JSHash", str);
+		},
+		PJWHash: function(str) {
+			return nodehashes.hash("PJWHash", str);
+		}, 
+		ELFHash: function(str) {
+			return nodehashes.hash("ELFHash", str);
+		},
+		BKDRHash: function(str) {
+			return nodehashes.hash("BKDRHash", str);
+		},
+		SDBMHash: function(str) {
+			return nodehashes.hash("SDBMHash", str);
+		},
+		DJBHash: function(str) {
+			return nodehashes.hash("DJBHash", str);
+		},
+		DEKHash: function(str) {
+			return nodehashes.hash("DEKHash", str);
+		},
+		BPHash: function(str) {
+			return nodehashes.hash("BPHash", str);
+		},
+		FNVHash: function(str) {
+			return nodehashes.hash("FNVHash", str);
+		},
+		APHash: function(str) {
+			return nodehashes.hash("APHash", str);
+		}
+	}
+})();
+
+
+
