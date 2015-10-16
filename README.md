@@ -12,7 +12,7 @@ Some of the more common uses of hash functions.
 > ### JS Hash Function
 > A bitwise hash function written by Justin Sobel.
 
-> ### PJ WHas Functionh
+> ### PJW Hash Functionh
 > This hash algorithm is based on work by Peter J. Weinberger of AT&T Bell Labs.
 > The book Compilers (Principles, Techniques and Tools) by Aho, Sethi and Ulman,
 > recommends the use of hash functions that employ the hashing methodology found
