@@ -1,13 +1,6 @@
 # node-hashes
-[![build status][travis-image]][travis-url]
-[![node version][node-image]][node-url]
-[![Dependency Status][david-image]][david-url]
-[travis-image]: https://travis-ci.org/liushoukai/node-hashes.svg?branch=master
-[travis-url]: https://travis-ci.org/liushoukai/node-hashes
-[node-image]: https://img.shields.io/badge/node.js-%3E=_0.10-brightgreen.svg?style=flat
-[node-url]: http://nodejs.org/download/
-[david-image]: https://david-dm.org/liushoukai/node-hashes.svg?style=flat
-[david-url]: https://david-dm.org/liushoukai/node-hashes
+[![build status](https://travis-ci.org/liushoukai/node-hashes.svg?branch=master)](https://travis-ci.org/liushoukai/node-hashes)
+[![node version](https://img.shields.io/badge/node.js-%3E=_0.11-brightgreen.svg?style=flat)](http://nodejs.org/download/)
 
 Some of the more common uses of hash functions.
 
