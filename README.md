@@ -32,7 +32,7 @@ Some of the more common uses of hash functions.
 > seems to have a good over-all distribution for many different data sets. It seems to work well in
 > situations where there is a high variance in the MSBs of the elements in a data set.
 
-> ### DBJ Hash Function
+> ### DJB Hash Function
 > An algorithm produced by Professor Daniel J. Bernstein and shown first to the world on the usenet
 > newsgroup comp.lang.c. It is one of the most efficient hash functions ever published.
 
