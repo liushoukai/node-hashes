@@ -1,6 +1,12 @@
 # node-hashes
-[![build status](https://travis-ci.org/liushoukai/node-hashes.svg?branch=master)](https://travis-ci.org/liushoukai/node-hashes)
-[![node version](https://img.shields.io/badge/node.js-%3E=_0.11-brightgreen.svg?style=flat)](http://nodejs.org/download/)
+
+[![node version][node-image]][node-url]
+[![npm version][npm-image]][npm-url]
+[![npm downloads][downloads-image]][downloads-url]
+[![travis build][travis-image]][travis-url]
+[![appveyor build][appveyor-image]][appveyor-url]
+[![liushoukai's gratipay][gratipay-image-liushoukai]][gratipay-url-liushoukai]
+<!-- [![test coverage][coveralls-image]][coveralls-url] -->
 
 Some of the more common uses of hash functions.
 
@@ -74,3 +80,35 @@ var hashFn = require('node-hashes')
   , hash = hashFn.APHash('foo')
   ;
 ```
+
+## License
+
+[![GitHub license][license-image]][license-url]
+
+
+
+
+
+[node-image]: https://img.shields.io/badge/node.js-%3E=_0.11-brightgreen.svg?style=flat
+[node-url]: http://nodejs.org/download
+
+[npm-image]: https://img.shields.io/npm/v/node-hashes.svg
+[npm-url]: https://npmjs.org/package/node-hashes
+
+[downloads-image]: https://img.shields.io/npm/dm/node-hashes.svg
+[downloads-url]: https://npmjs.org/package/node-hashes
+
+[travis-image]: https://img.shields.io/travis/liushoukai/node-hashes/master.svg?label=linux
+[travis-url]: https://travis-ci.org/liushoukai/node-hashes
+
+[appveyor-image]: https://img.shields.io/appveyor/ci/liushoukai/node-hashes/master.svg?label=windows
+[appveyor-url]: https://ci.appveyor.com/project/liushoukai/node-hashes
+
+[coveralls-image]: https://img.shields.io/coveralls/liushoukai/node-hashes/master.svg
+[coveralls-url]: https://coveralls.io/r/liushoukai/node-hashes?branch=master
+
+[gratipay-image-liushoukai]: https://img.shields.io/gratipay/liushoukai.svg
+[gratipay-url-liushoukai]: https://gratipay.com/liushoukai/
+
+[license-image]: https://img.shields.io/badge/license-ISC-blue.svg
+[license-url]: https://raw.githubusercontent.com/liushoukai
