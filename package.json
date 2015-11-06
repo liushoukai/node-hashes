@@ -1,6 +1,6 @@
 {
   "name": "node-hashes",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "some of the more common uses of hash functions",
   "main": "index.js",
   "scripts": {
