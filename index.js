@@ -37,7 +37,7 @@ module.exports = (function() {
 		APHash: function(str) {
 			return nodehashes.hash("APHash", str);
 		}
-	}
+	};
 })();
 
 
