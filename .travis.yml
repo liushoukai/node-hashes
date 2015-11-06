@@ -19,3 +19,4 @@ addons:
       - g++-4.8
       - clang
 script: "npm run-script test-ci"
+after_script: "npm install coveralls@2.10.0 && cat ./coverage/lcov.info | coveralls"
