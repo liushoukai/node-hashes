@@ -8,7 +8,7 @@
 [![liushoukai's gratipay][gratipay-image-liushoukai]][gratipay-url-liushoukai]
 <!-- [![test coverage][coveralls-image]][coveralls-url] -->
 
-Some of the more common uses of hash functions.
+> Some of the more common uses of hash functions.
 
 ## Hash Function Algorithms
 
