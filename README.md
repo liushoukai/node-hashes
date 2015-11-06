@@ -6,6 +6,8 @@
 [![test coverage][coveralls-image]][coveralls-url]
 [![npm version][npm-image]][npm-url]
 [![npm downloads][downloads-image]][downloads-url]
+[![Code Climate][codeclimate-image]][codeclimate-url]
+
 
 > Some of the more common uses of hash functions.
 
@@ -114,3 +116,6 @@ var hashFn = require('node-hashes')
 
 [license-image]: https://img.shields.io/badge/license-ISC-blue.svg
 [license-url]: https://raw.githubusercontent.com/liushoukai
+
+[codeclimate-image]:https://codeclimate.com/github/liushoukai/node-hashes/badges/gpa.svg
+[codeclimate-url]:https://codeclimate.com/github/liushoukai/node-hashes
