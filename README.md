@@ -5,7 +5,6 @@
 [![appveyor build][appveyor-image]][appveyor-url]
 [![npm version][npm-image]][npm-url]
 [![npm downloads][downloads-image]][downloads-url]
-[![liushoukai's gratipay][gratipay-image-liushoukai]][gratipay-url-liushoukai]
 <!-- [![test coverage][coveralls-image]][coveralls-url] -->
 
 > Some of the more common uses of hash functions.
@@ -81,11 +80,14 @@ var hashFn = require('node-hashes')
   ;
 ```
 
+## People
+
+- [liushoukai](https://github.com/liushoukai) [![liushoukai's gratipay][gratipay-image-liushoukai]][gratipay-url-liushoukai]
+- [List of all contributors](https://github.com/liushoukai/node-hashes/graphs/contributors)
+
 ## License
 
 [![GitHub license][license-image]][license-url]
-
-
 
 
 
