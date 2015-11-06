@@ -3,9 +3,9 @@
 [![node version][node-image]][node-url]
 [![travis build][travis-image]][travis-url]
 [![appveyor build][appveyor-image]][appveyor-url]
+[![test coverage][coveralls-image]][coveralls-url]
 [![npm version][npm-image]][npm-url]
 [![npm downloads][downloads-image]][downloads-url]
-<!-- [![test coverage][coveralls-image]][coveralls-url] -->
 
 > Some of the more common uses of hash functions.
 

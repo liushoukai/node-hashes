@@ -4,7 +4,11 @@
   "description": "some of the more common uses of hash functions",
   "main": "index.js",
   "scripts": {
-    "test": "node ./test/hash.test.js"
+    "test": "mocha --reporter spec --bail test/",
+    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec test/"
+  },
+  "engines": {
+    "node": ">= 0.11.0"
   },
   "repository": {
     "type": "git",
@@ -14,17 +18,17 @@
     "hash",
     "hashes",
     "algorithm",
-    "RS",  
-    "JS",  
-    "PJW", 
-    "ELF", 
+    "RS",
+    "JS",
+    "PJW",
+    "ELF",
     "BKDR",
     "SDBM",
-    "DJB", 
-    "DEK", 
-    "BP",  
-    "FNV", 
-    "AP" 
+    "DJB",
+    "DEK",
+    "BP",
+    "FNV",
+    "AP"
   ],
   "author": "liushoukai",
   "license": "ISC",
@@ -34,6 +38,7 @@
   "homepage": "https://github.com/liushoukai/node-hashes#readme",
   "devDependencies": {
     "chai": "^3.3.0",
+    "istanbul": "^0.4.0",
     "mocha": "*"
   }
 }
