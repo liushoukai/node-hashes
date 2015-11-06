@@ -1,10 +1,10 @@
 # node-hashes
 
 [![node version][node-image]][node-url]
-[![npm version][npm-image]][npm-url]
-[![npm downloads][downloads-image]][downloads-url]
 [![travis build][travis-image]][travis-url]
 [![appveyor build][appveyor-image]][appveyor-url]
+[![npm version][npm-image]][npm-url]
+[![npm downloads][downloads-image]][downloads-url]
 [![liushoukai's gratipay][gratipay-image-liushoukai]][gratipay-url-liushoukai]
 <!-- [![test coverage][coveralls-image]][coveralls-url] -->
 
