@@ -114,8 +114,8 @@ var hashFn = require('node-hashes')
 [gratipay-image-liushoukai]: https://img.shields.io/gratipay/liushoukai.svg
 [gratipay-url-liushoukai]: https://gratipay.com/liushoukai/
 
-[license-image]: https://img.shields.io/badge/license-ISC-blue.svg
-[license-url]: https://raw.githubusercontent.com/liushoukai
+[license-image]: https://img.shields.io/badge/license-MIT-blue.svg
+[license-url]: https://raw.githubusercontent.com/liushoukai/node-hashes/master/LICENSE
 
 [codeclimate-image]:https://codeclimate.com/github/liushoukai/node-hashes/badges/gpa.svg
 [codeclimate-url]:https://codeclimate.com/github/liushoukai/node-hashes
