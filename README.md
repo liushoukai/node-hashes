@@ -60,6 +60,25 @@
 > The basis of the FNV hash algorithm was taken from an idea sent as reviewer comments to the IEEE
 > POSIX P1003.2 committee by Glenn Fowler and Phong Vo back in 1991.
 
+## Benchmarks
+
+|algorithm|benchmarks|
+|---|---|---|
+|RsHash  |RsHash(key) x 1,512,931 ops/sec ±0.92% (80 runs sampled)  |
+|JSHash  |JSHash(key) x 1,541,553 ops/sec ±0.99% (80 runs sampled)  |
+|PJWHash |PJWHash(key) x 1,344,942 ops/sec ±1.35% (80 runs sampled) |
+|ELFHash |ELFHash(key) x 1,352,239 ops/sec ±1.11% (76 runs sampled) |
+|BKDRHash|BKDRHash(key) x 1,364,106 ops/sec ±2.56% (68 runs sampled)|
+|ELFHash |ELFHash(key) x 1,342,168 ops/sec ±1.12% (76 runs sampled) |
+|SDBMHash|SDBMHash(key) x 1,338,767 ops/sec ±1.02% (76 runs sampled)|
+|DJBHash |DJBHash(key) x 1,400,163 ops/sec ±1.89% (72 runs sampled) |
+|DEKHash |DEKHash(key) x 1,310,762 ops/sec ±0.91% (82 runs sampled) |
+|BPHash  |BPHash(key) x 1,360,768 ops/sec ±1.46% (78 runs sampled)  |
+|FNVHash |FNVHash(key) x 1,235,105 ops/sec ±1.29% (77 runs sampled) |
+|APHash  |APHash(key) x 1,193,078 ops/sec ±1.11% (80 runs sampled)  |
+
+
+
 ## Install
 ```
 $npm install node-hashes --save
