@@ -53,31 +53,15 @@
 > ### BP Hash Function
 > That code converts a (7-bit) ASCII string of at most (4 or 9) characters into a unique (32- or 64-)bit integer,
 > depending on the platform.  If more characters are given, the first n-(5 or 10) characters are ignored,
-> the low (4 or 1) bits of the next character are used, and the last (4 or 9) characters are used in full.  
+> the low (4 or 1) bits of the next character are used, and the last (4 or 9) characters are used in full.
 > The code does not use the length of the string, so leading null characters are ignored.
 
 > ### FNV Hash Function
 > The basis of the FNV hash algorithm was taken from an idea sent as reviewer comments to the IEEE
 > POSIX P1003.2 committee by Glenn Fowler and Phong Vo back in 1991.
 
-## Benchmarks
-
-|algorithm|benchmarks|
-|---|---|---|
-|RsHash  |RsHash(key) x 1,512,931 ops/sec ±0.92% (80 runs sampled)  |
-|JSHash  |JSHash(key) x 1,541,553 ops/sec ±0.99% (80 runs sampled)  |
-|PJWHash |PJWHash(key) x 1,344,942 ops/sec ±1.35% (80 runs sampled) |
-|ELFHash |ELFHash(key) x 1,352,239 ops/sec ±1.11% (76 runs sampled) |
-|BKDRHash|BKDRHash(key) x 1,364,106 ops/sec ±2.56% (68 runs sampled)|
-|ELFHash |ELFHash(key) x 1,342,168 ops/sec ±1.12% (76 runs sampled) |
-|SDBMHash|SDBMHash(key) x 1,338,767 ops/sec ±1.02% (76 runs sampled)|
-|DJBHash |DJBHash(key) x 1,400,163 ops/sec ±1.89% (72 runs sampled) |
-|DEKHash |DEKHash(key) x 1,310,762 ops/sec ±0.91% (82 runs sampled) |
-|BPHash  |BPHash(key) x 1,360,768 ops/sec ±1.46% (78 runs sampled)  |
-|FNVHash |FNVHash(key) x 1,235,105 ops/sec ±1.29% (77 runs sampled) |
-|APHash  |APHash(key) x 1,193,078 ops/sec ±1.11% (80 runs sampled)  |
-
-
+> ### MurmurHash3
+> MurmurHash is a non-cryptographic hash function suitable for general hash-based lookup.It was created by Austin Appleby in 2008.It comes in 3 variants - a 32-bit version that targets low latency for hash table use and two 128-bit versions for generating unique identifiers for large blocks of data, one each for x86 and x64 platforms.
 
 ## Install
 ```
@@ -85,21 +69,51 @@ $npm install node-hashes --save
 ```
 
 ## Usage
+```js
+var hashes = require('node-hashes');
+var ret = hashes.RSHash('foo');
 ```
-var hashFn = require('node-hashes')
-  , hash = hashFn.RSHash('foo')
-  , hash = hashFn.JSHash('foo')
-  , hash = hashFn.PJWHash('foo')
-  , hash = hashFn.ELFHash('foo')
-  , hash = hashFn.BKDRHash('foo')
-  , hash = hashFn.SDBMHash('foo')
-  , hash = hashFn.DJBHash('foo')
-  , hash = hashFn.DEKHash('foo')
-  , hash = hashFn.BPHash('foo')
-  , hash = hashFn.FNVHash('foo')
-  , hash = hashFn.APHash('foo')
-  ;
+
+```js
+var hashes = require('node-hashes');
+var seed = 32;
+var ret = hashes.MurmurHash3_x86_128('foo', seed);
+for (var i=0; i<ret.length; i++) {
+    console.info(ret[i]);
+}
 ```
+
+## Benchmarks
+
+> - RsHash(key) x 2,146,582 ops/sec ±0.36% (93 runs sampled)
+> - JSHash(key) x 2,182,381 ops/sec ±0.35% (92 runs sampled)
+> - PJWHash(key) x 1,926,879 ops/sec ±0.30% (93 runs sampled)
+> - ELFHash(key) x 1,891,659 ops/sec ±0.38% (90 runs sampled)
+> - BKDRHash(key) x 1,857,905 ops/sec ±0.64% (91 runs sampled)
+> - ELFHash(key) x 1,894,290 ops/sec ±0.34% (89 runs sampled)
+> - SDBMHash(key) x 1,912,925 ops/sec ±0.54% (90 runs sampled)
+> - DJBHash(key) x 2,030,426 ops/sec ±0.23% (93 runs sampled)
+> - DEKHash(key) x 1,913,679 ops/sec ±0.52% (92 runs sampled)
+> - BPHash(key) x 1,970,864 ops/sec ±0.43% (91 runs sampled)
+> - FNVHash(key) x 1,784,257 ops/sec ±0.51% (90 runs sampled)
+> - APHash(key) x 1,780,209 ops/sec ±0.39% (92 runs sampled)
+> - MurmurHash3_x86_32(key, 42) x 2,491,832 ops/sec ±0.42% (91 runs sampled)
+> - MurmurHash3_x86_128(key, 42) x 580,621 ops/sec ±0.51% (91 runs sampled)
+> - Fastest is MurmurHash3_x86_32(key, 42)
+
+## Functions
+> - RSHash(key);
+> - JSHash(key);
+> - PJWHash(key);
+> - ELFHash(key);
+> - BKDRHash(key);
+> - SDBMHash(key);
+> - DEKHash(key);
+> - BPHash(key);
+> - FNVHash(key);
+> - APHash(key);
+> - MurmurHash3_x86_32(key [,seed]);
+> - MurmurHash3_x86_128(key [,seed]);
 
 ## People
 

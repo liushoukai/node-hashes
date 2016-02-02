@@ -28,7 +28,8 @@
     "DEK",
     "BP",
     "FNV",
-    "AP"
+    "AP",
+    "MurmurHash3"
   ],
   "author": "liushoukai",
   "license": "ISC",
@@ -41,5 +42,8 @@
     "chai": "^3.3.0",
     "istanbul": "^0.4.0",
     "mocha": "*"
+  },
+  "dependencies": {
+    "nan": "^2.2.0"
   }
 }

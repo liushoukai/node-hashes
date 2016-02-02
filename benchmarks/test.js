@@ -41,6 +41,12 @@ suite
 .add('APHash(key)', function() {
   hashes.APHash(key);
 })
+.add('MurmurHash3_x86_32(key, 42)', function() {
+  hashes.MurmurHash3_x86_32(key, 42);
+})
+.add('MurmurHash3_x86_128(key, 42)', function() {
+  hashes.MurmurHash3_x86_128(key, 42);
+})
 .on('cycle', function(event) {
   console.log(String(event.target));
 })

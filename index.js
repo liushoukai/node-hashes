@@ -12,7 +12,7 @@ module.exports = (function() {
 		},
 		PJWHash: function(str) {
 			return nodehashes.hash("PJWHash", str);
-		}, 
+		},
 		ELFHash: function(str) {
 			return nodehashes.hash("ELFHash", str);
 		},
@@ -36,7 +36,13 @@ module.exports = (function() {
 		},
 		APHash: function(str) {
 			return nodehashes.hash("APHash", str);
-		}
+		},
+		MurmurHash3_x86_32: function(str, seed) {
+			return nodehashes.murmurhash("MurmurHash3_x86_32", str, seed);
+		},
+        MurmurHash3_x86_128: function(str, seed) {
+            return nodehashes.murmurhash("MurmurHash3_x86_128", str, seed);
+        }
 	};
 })();
 

@@ -1,9 +1,10 @@
 /*
  ************************************************************************
  *                                                                      *
- *                    Hash Function Algorithms                          *       
+ *                    Hash Function Algorithms                          *
  *                                                                      *
- * Author: liushoukai - 2015                                            *
+ * Copyright(c) 2015-2016 liushoukai <kay21156929@gmail.com>
+ * MIT Licensed
  *                                                                      *
  * Thanks to Arash Partow who conributed to this implementation         *
  * http://www.partow.net/programming/hashfunctions/                     *
@@ -12,30 +13,27 @@
  */
 
 #include <node.h>
+#include <iostream>
 #include <v8-util.h>
+#include <nan.h>
 #include "GeneralHashFunctions.h"
+#include "MurmurHash3.h"
 
-using v8::FunctionCallbackInfo;
-using v8::Isolate;
-using v8::Local;
-using v8::Object;
-using v8::String;
-using v8::Value;
-using v8::StdPersistentValueMap;
-using v8::Exception;
+using namespace v8;
+using namespace std;
 
 void GenHash(const FunctionCallbackInfo<Value>& args) {
-    
+
     Isolate* isolate = args.GetIsolate();
 
     if (args.Length() < 2) {
         isolate->ThrowException(Exception::TypeError(String::NewFromUtf8(isolate, "Wrong number of arguments")));
         return;
     }
-    
+
     String::Utf8Value v8_algorithm_type(args[0]->ToString());
     String::Utf8Value v8_string(args[1]->ToString());
-    
+
     std::string algorithm_type = std::string(*v8_algorithm_type);
 
     unsigned int hash = 0;
@@ -71,8 +69,45 @@ void GenHash(const FunctionCallbackInfo<Value>& args) {
 
 }
 
+void MurmurHash(const FunctionCallbackInfo<Value>& args) {
+
+    Isolate* isolate = args.GetIsolate();
+
+    if (args.Length() < 2) {
+        isolate->ThrowException(Exception::TypeError(String::NewFromUtf8(isolate, "Wrong number of arguments")));
+        return;
+    }
+
+    String::Utf8Value v8_algorithm_type(args[0]->ToString());
+    String::Utf8Value v8_string(args[1]->ToString());
+    uint32_t tmp = args[2]->ToUint32()->Value();
+
+    std::string algorithm_type = std::string(*v8_algorithm_type);
+
+    uint32_t seed = tmp > 0 ? tmp : 42;
+    uint32_t hash[4];
+
+    if (algorithm_type == "MurmurHash3_x86_32") {
+        MurmurHash3_x86_32(*v8_string, strlen(*v8_string), seed, hash);
+        args.GetReturnValue().Set(hash[0]);
+    } else if (algorithm_type == "MurmurHash3_x86_128") {
+        MurmurHash3_x86_128(*v8_string, strlen(*v8_string), seed, hash);
+        Local<Array> values = Nan::New<Array>(4);
+        for (int i=0; i<4; i++) {
+            values->Set(Nan::New<Integer>(i), Nan::New<Uint32>(hash[i]));
+        }
+        Local<Value> ret = values;
+        args.GetReturnValue().Set(ret);
+    } else {
+        isolate->ThrowException(Exception::TypeError(String::NewFromUtf8(isolate, "Unkonwn algorithm type")));
+        return;
+    }
+
+}
+
 void init(Local<Object> exports) {
     NODE_SET_METHOD(exports, "hash", GenHash);
+    NODE_SET_METHOD(exports, "murmurhash", MurmurHash);
 }
 
 NODE_MODULE(addon, init)
