@@ -116,7 +116,7 @@ describe('#APHash()', function() {
 });
 
 describe('#MurmurHash3_x86_32()', function() {
-    describe(`when key is ${key}`, function() {
+    describe('when key is ' + key, function() {
         describe('when seed is 42', function() {
             it('should return 2044886019', function() {
                 assert.equal(hashes.MurmurHash3_x86_32(key), 2044886019);
@@ -131,7 +131,7 @@ describe('#MurmurHash3_x86_32()', function() {
 });
 
 describe('#MurmurHash3_x86_128()', function() {
-    describe(`when key is ${key}`, function() {
+    describe('when key is ' + key, function() {
         describe('when seed is 42', function() {
             it('should return [2940463659, 3139277340, 1414686018, 2517664704]', function() {
                 var ret = hashes.MurmurHash3_x86_128(key);
