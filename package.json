@@ -32,7 +32,7 @@
     "MurmurHash3"
   ],
   "author": "liushoukai",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/liushoukai/node-hashes/issues"
   },
