@@ -44,6 +44,7 @@
     "mocha": "*"
   },
   "dependencies": {
-    "nan": "^2.2.0"
+    "nan": "^2.2.0",
+    "node-gyp": "3.4.0"
   }
 }
