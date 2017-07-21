@@ -48,7 +48,7 @@
 > under the topic of sorting and search chapter 6.4.
 
 > ### AP Hash Function
-> An algorithm produced by Arash Partow.
+> An algorithm produced by Arash Partow..
 
 > ### BP Hash Function
 > That code converts a (7-bit) ASCII string of at most (4 or 9) characters into a unique (32- or 64-)bit integer,
