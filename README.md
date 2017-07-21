@@ -9,7 +9,7 @@
 [![Code Climate][codeclimate-image]][codeclimate-url]
 
 
-> Some of the more common uses of hash functions.
+> Some of the more common uses of hash functions
 
 ## Hash Function Algorithms
 
