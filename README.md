@@ -14,7 +14,7 @@
 ## Hash Function Algorithms
 
 > ### RS Hash Function
-> A simple hash function from Robert Sedgwicks Algorithms in C book..
+> A simple hash function from Robert Sedgwicks Algorithms in C book.
 
 > ### JS Hash Function
 > A bitwise hash function written by Justin Sobel.
