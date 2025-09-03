@@ -117,7 +117,6 @@ for (var i=0; i<ret.length; i++) {
 
 ## People
 
-- [liushoukai](https://github.com/liushoukai) [![liushoukai's gratipay][gratipay-image-liushoukai]][gratipay-url-liushoukai]
 - [List of all contributors](https://github.com/liushoukai/node-hashes/graphs/contributors)
 
 ## License
